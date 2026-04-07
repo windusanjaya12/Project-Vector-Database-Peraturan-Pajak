@@ -1,0 +1,5 @@
+chromadb
+pdfplumber
+tqdm
+sentence-transformers
+matplotlib
