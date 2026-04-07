@@ -1,74 +1,88 @@
-# AI Tax Regulation Knowledge Base (Vector Database)
+# AI-Powered Tax Regulation Search & Chatbot
+
+Sistem AI untuk pencarian dan tanya jawab peraturan pajak Indonesia menggunakan **Vector Database** dan **Semantic Search**.
+
+---
+
+## Demo
+Klik untuk melihat demo:  
+(Tempel link video kamu di sini)
+
+---
 
 ## Overview
-Project ini merupakan project skripsi yang berjudul **knowledge base peraturan perpajakan Indonesia tahun 2024** berbasis **vector database** untuk mendukung pencarian informasi secara semantik. Dalam project ini digunakan **ChromaDB** sebagai vector database, **Sentence Transformer multilingual** sebagai model embedding, **Ollama qwen2.5:3b-instruct-q4_0** sebagai model LLM, dan **Streamlit** untuk antar muka chatbot.
+Project ini mengembangkan **knowledge base peraturan perpajakan Indonesia tahun 2024** berbasis vector database untuk meningkatkan kualitas pencarian informasi hukum pajak.
 
-Permasalahan utama dalam pencarian peraturan pajak adalah:
-- Jumlah regulasi yang sangat banyak dan kompleks  
-- Pencarian masih berbasis keyword  
-- Sulit menemukan informasi yang benar-benar relevan  
+Permasalahan utama:
+- Banyaknya peraturan pajak yang kompleks dan terus berubah  
+- Sistem pencarian masih berbasis keyword  
+- Sulit menemukan informasi yang relevan secara cepat  
 
-Melalui project ini, dokumen peraturan pajak diubah menjadi representasi vektor menggunakan teknik **semantic embedding**, sehingga sistem dapat memahami **makna dan konteks**, bukan hanya kata kunci.
-
----
-
-## Tujuan Project
-- Membangun dataset peraturan pajak dalam bentuk vector embedding  
-- Mengembangkan knowledge base untuk pencarian semantik  
-- Mengimplementasikan chatbot AI sederhana berbasis vector database  
-- Menjadi fondasi untuk sistem AI seperti RAG di masa depan  
-
----
-
-## Cara Kerja Sistem
-
-1. **Pengumpulan Data**  
-   Mengambil dokumen peraturan pajak tahun 2024 dari situs resmi Direktorat Jenderal Pajak  
-
-2. **Preprocessing**  
-   - Ekstraksi teks dari PDF  
-   - Pembersihan dan normalisasi teks  
-   - Segmentasi menjadi pasal dan ayat  
-
-3. **Embedding**  
-   Mengubah teks menjadi vector menggunakan model sentence-transformers  
-
-4. **Vector Database**  
-   Menyimpan embedding ke dalam ChromaDB  
-
-5. **Semantic Search & Chatbot**  
-   - User menginput pertanyaan  
-   - Sistem mencari konteks paling relevan dari vector database  
-   - Chatbot menampilkan jawaban berdasarkan hasil pencarian tersebut  
+Solusi dalam project ini:  
+Menggunakan pendekatan **semantic search berbasis embedding**, sehingga sistem dapat memahami **makna dan konteks pertanyaan**, bukan hanya kata kunci.
 
 ---
 
 ## AI Chatbot
-Sebagai implementasi dari knowledge base ini, dikembangkan **chatbot AI sederhana** yang mampu menjawab pertanyaan seputar peraturan pajak berdasarkan dataset vector yang telah dibuat.
+Sebagai implementasi dari knowledge base, project ini juga menghadirkan **chatbot AI sederhana**.
 
-Chatbot ini bekerja dengan pendekatan:
-- Semantic search berbasis vector database  
-- Mengambil informasi paling relevan dari dataset  
-- Menyajikan jawaban berdasarkan konteks peraturan  
+Chatbot ini mampu:
+- Menjawab pertanyaan seputar peraturan pajak  
+- Mengambil informasi dari vector database  
+- Memberikan hasil berdasarkan konteks (semantic search)  
 
-Contoh:
-> Input: “Bagaimana langkah pelaporan pajak barang mewah?”  
-> Output: Untuk melaporkan pajak atas barang merah, pihak penerima barang kena pajak harus menyampaikan permohonan SKB PPnBM secara elektronik melalui saluran pada laman Direktorat Jendral Pajak. Selain itu, pasal 205 ayat(3) dari Undang-Undang No. 78 Tahun 2024 juga menyebutkan bahwa wajib pajak yang tidak melaksanakan kewajiban tersebut akan ditagih oleh kepala Kantor Pelayanan Pajak tempat wajib pajak terdaftar dengan sanksi administratif sesuai peraturan peruntangan di bidang perpajakan.
+**Contoh:**
+
+Input: pajak UMKM 2024  
+Output: Menampilkan peraturan yang relevan  
+
+---
+
+## Architecture
+
+Data → Preprocessing → Embedding → ChromaDB → Semantic Search → Chatbot  
 
 ---
 
 ## Features
 - Semantic search berbasis embedding  
-- Knowledge base peraturan pajak  
-- Chatbot AI sederhana  
-- Pencarian berbasis konteks (bukan keyword)  
-- Dataset regulasi pajak tahun 2024  
+- Vector database menggunakan ChromaDB  
+- AI chatbot sederhana berbasis retrieval  
+- Pencarian berbasis konteks (context-aware search)  
+- Dataset regulasi pajak Indonesia tahun 2024  
+
+---
+
+## Tech Stack
+- Python  
+- ChromaDB  
+- Sentence Transformers  
+- PDFPlumber  
+- tqdm  
+- Matplotlib  
 
 ---
 
 ## Requirements
-chromadb
-pdfplumber
-tqdm
-sentence-transformers
-matplotlib
+- chromadb
+- pdfplumber
+- tqdm
+- sentence-transformers
+- matplotlib
+
+
+---
+
+## Screenshots
+
+![App](screenshots/app.png)  
+![Result](screenshots/result.png)  
+
+---
+
+## Insight
+- Pencarian berbasis vector database menghasilkan hasil yang lebih relevan dibanding keyword search  
+- Sistem mampu memahami konteks pertanyaan pengguna  
+- Chatbot dapat menjawab pertanyaan berdasarkan knowledge base yang dibangun  
+
+---
