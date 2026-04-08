@@ -76,7 +76,7 @@ Data → Preprocessing → Embedding → ChromaDB → Semantic Search → Chatbo
 ## Screenshots
 
 ![App](screenshots/app.png)  
-![Result](screenshots/result.png)  
+![Result](screenshots/result.jpeg)  
 
 ---
 
