@@ -6,7 +6,7 @@ Sistem AI untuk pencarian dan tanya jawab peraturan pajak Indonesia menggunakan 
 
 ## Demo
 Klik untuk melihat demo:  
-(Tempel link video kamu di sini)
+(https://drive.google.com/drive/folders/1L2G9zS0v3t52OD1Tm91_Y6E387UDehmd?usp=sharing)
 
 ---
 
